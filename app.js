@@ -50,6 +50,12 @@ app.get( "/" , (req,res) => {
     res.send("Invalid Endpoint");
 });
 
+//redirect non-routes to main page 
+app.get('*' , (req, res) => {
+    res.sendfile(path.join(__dirname,'public/index.html'));
+
+});
+
 //start server
 app.listen( port , () => {
     console.log("server started on port "+port);

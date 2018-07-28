@@ -1,3 +1,9 @@
-<p>
-  profile works!
-</p>
+<div *ngIf="user">
+  <h1>{{user.name}}</h1>
+  <hr>
+  <ul class="list-group">
+    <li class="list-group-item">Username : {{user.username}}</li>
+    <li class="list-group-item">Email Id : {{user.email}}</li>
+    
+  </ul>
+</div>
